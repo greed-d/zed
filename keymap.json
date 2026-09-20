@@ -28,7 +28,7 @@
       "space c f": "editor::Format",
       "space c r": "editor::Rename",
       "\\": "vim::ToggleProjectPanelFocus",
-      "space c d": "editor::ToggleInlineDiagnostics",
+      "space c d": "editor::GoToDiagnostic",
       "shift-k": "editor::Hover",
 
       // Git
