@@ -1,0 +1,148 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // Put key bindings here if you want them to work in normal & visual mode.
+
+      // Finder
+      "space s f": "file_finder::Toggle",
+      "space s b": "tab_switcher::Toggle",
+      "space s w": "workspace::NewSearch",
+      "space s g": "text_finder::Toggle",
+
+      // Code
+      "space c a": "editor::ToggleCodeActions",
+      "space c f": "editor::Format",
+      "space c r": "editor::Rename",
+      "\\": "vim::ToggleProjectPanelFocus",
+      "space c d": "editor::ToggleInlineDiagnostics",
+      "shift-k": "editor::Hover",
+
+      // Git
+      "space g b": "editor::BlameHover",
+      "space g S": "git::StageFile",
+      "space g s": "git::StageAndNext",
+      "space g u": "git::UnstageAndNext",
+      "space g d": "git::OpenFileDiff",
+
+      //Buffer
+      "space b o":"workspace::CloseInactiveTabsAndPanes",
+      "space b k":"pane::CloseActiveItem",
+      "space b n":"workspace::NewFile",
+
+      //Terminal
+      "Alt-i":"terminal_panel::Toggle",
+
+      //Movement
+      "Alt-k" : "editor::MoveLineUp",
+      "Alt-j" : "editor::MoveLineDown",
+
+      //window
+      "Space |":"pane::SplitVertical",
+      "Space -":"pane::SplitHorizontal"
+
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      // "shift-y": ["workspace::SendKeystrokes", "y $"] // Use neovim's yank behavior: yank to end of line.
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore" // In insert mode, make jk escape to normal mode.
+      "Alt-k" : "editor::MoveLineUp",
+      "Alt-j" : "editor::MoveLineDown",
+      "Ctrl-l": "editor::NextSnippetTabstop",
+      "Ctrl-k": "editor::PreviousSnippetTabstop"
+    }
+  },
+
+  {
+    "context": "vim_mode == insert && showing_completions",
+    "bindings": {
+      // "j k": "vim::NormalBefore" // In insert mode, make jk escape to normal mode.
+      "Ctrl y": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      // Put key bindings here (in addition to the context above) if you want them to
+      // work when no editor exists.
+      "space s f": "file_finder::Toggle",
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown"
+      // ... or other keybindings
+    }
+  },
+  {
+    "bindings": {
+      "\\": "project_panel::Toggle"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "Alt-i":"terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "unbind": {
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && showing_code_actions",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCodeAction"
+    }
+  },
+  {
+    "context": "Editor && showing_code_actions",
+    "unbind": {
+      "enter": "editor::ConfirmCodeAction"
+    }
+  },
+  {
+    "context": "Editor && renaming",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmRename"
+    }
+  },
+  {
+    "context": "Editor && renaming",
+    "unbind": {
+      "enter": "editor::ConfirmRename"
+    }
+  }
+]
