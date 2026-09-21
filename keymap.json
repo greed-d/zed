@@ -39,6 +39,9 @@
       "space g d": "git::OpenFileDiff",
       "space g c c": "git::Commit",
       "space g P": "git::Push",
+      "space g p": "git::Pull",
+      "space g g": "git_panel::Toggle",
+      "space g i": "git::Init",
 
       //Buffer
       "space b o":"workspace::CloseInactiveTabsAndPanes",
@@ -102,7 +105,8 @@
   },
   {
     "bindings": {
-      "\\": "project_panel::Toggle"
+      "\\": "project_panel::Toggle",
+      // "space g g": "git_panel::Toggle"
     }
   },
   {
