@@ -37,6 +37,8 @@
       "space g s": "git::StageAndNext",
       "space g u": "git::UnstageAndNext",
       "space g d": "git::OpenFileDiff",
+      "space g c c": "git::Commit",
+      "space g P": "git::Push",
 
       //Buffer
       "space b o":"workspace::CloseInactiveTabsAndPanes",
